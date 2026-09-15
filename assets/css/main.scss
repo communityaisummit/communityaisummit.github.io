@@ -1,0 +1,285 @@
+---
+---
+
+$base-font-size: 16px;
+$base-primary-color: #2C2F32;
+$base-secondary-color: #D4D8E1;
+$base-background-color: #E6E6E6;
+$base-highlight-color: #C4E709;
+$base-line-color: #C0C1C1;
+$base-highlight-color-pink: #FF99EE;
+$base-highlight-color-blue: #A4D1FF;
+$base-highlight-color-orange: #FFA500;
+
+
+body {
+  background-color: $base-background-color;
+  font-family: "DM Sans", sans-serif;
+  font-size: $base-font-size;
+  color: $base-primary-color;
+}
+
+.dm-sans-medium {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.eb-garamond-medium {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.navbar {
+  padding: 0;
+  border-bottom: 1px solid $base-secondary-color;
+}
+.navbar-brand {
+  font-size: $base-font-size;
+
+  span {
+    display: none;
+  }
+}
+
+.nav-link {
+  font-size: $base-font-size;
+  color: $base-primary-color;
+  padding-right: 5rem;
+  padding-left: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+}
+
+.navbar .container-fluid {
+  padding-right: 0;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 7rem;
+  padding-left: 1rem;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.nav-item {
+  border-left: 1px solid $base-secondary-color;
+
+  &.highlighted {
+    background: $base-primary-color;
+
+    .nav-link {
+      color: $base-background-color;
+    }
+  }
+}
+
+span.highlighted {
+  background: $base-highlight-color;
+  color: $base-primary-color;
+}
+
+header {
+  background-image: url(/assets/images/hero_bg.png);  
+  background-size: cover;
+  background-position: top left;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+
+  h1 {
+    max-width: 700px;
+
+    span.non-highlighted {
+      background: $base-background-color;
+    }  
+  }
+
+  .header-details {
+    background: $base-background-color;
+  }
+
+  .header-content{
+    background: $base-background-color;
+    padding-left: 20px;
+  }
+
+  p {
+    font-weight: 800;
+  }
+
+  .subtext {
+      font-weight: 400;
+  }
+
+  .date {
+    margin-top: 2em;
+  }
+
+  a {
+    display: inline-block;
+    background-color: $base-background-color;
+    padding: 10px;
+    border: 1px solid $base-primary-color;
+    color: $base-primary-color;
+    text-decoration: none;
+    margin-top: 1rem;
+
+    &:hover {
+      color: $base-background-color;
+      background-color: $base-primary-color;
+    }
+  }
+}
+
+.highlight-green {
+  background-color: $base-highlight-color;
+}
+
+.highlight-pink {
+  background-color: $base-highlight-color-pink;
+}
+
+.highlight-orange {
+  background-color: $base-highlight-color-orange;
+}
+
+.highlight-blue {
+  background-color: $base-highlight-color-blue;
+}
+
+.banner {
+  background-color: $base-primary-color;
+  color: $base-background-color;
+  position: relative;
+  padding: 2rem;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display:none;
+  }
+
+  p {
+    max-width: 800px;
+    margin-top: 2rem;
+  }
+
+  a {
+    color: $base-secondary-color; 
+  }
+}
+
+h3 {
+  font-size: $base-font-size;
+  text-transform: uppercase;
+}
+
+.features, .speakers, .agenda, .organizers {
+    padding: 2rem;
+  }
+
+.features {
+  font-size: 24px;
+
+  p {
+    margin-top: 1rem;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .row>.col, .row>[class^="col-"] {
+    padding: 1rem;
+    padding-top: 9rem;
+    border: 1px solid $base-line-color;
+  }
+}
+
+.speakers, .organizers {
+  .container {
+    width: 100%;
+    max-width: 100%;
+
+    img {
+      width: 100%;
+      filter: grayscale(1);
+    }
+
+    a {
+      text-decoration: none;
+      color: $base-primary-color;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    margin-top: 0;
+    padding-top: 13rem;
+    padding-bottom: 13rem;
+    padding-right: 5rem;
+    padding-left: 6rem;
+
+    .header-content {
+      max-width: 662px;
+    }
+
+    h1 {
+      font-size: 56px;
+    }
+
+    .subtext {
+      font-size: 20px;
+    }
+  }
+
+  h2 {
+    font-size: 46px;
+  }
+
+  .banner {
+    padding: 5rem;
+
+    h2 {
+      width: 800px;
+    }
+  }
+
+  .features, .speakers, .agenda, .organizers {
+    padding: 5rem;
+  }
+
+  .organizers {
+    .container {
+     max-width: 800px;
+     margin: 0;
+     margin-bottom:2rem;
+    }
+  }
+
+  .navbar-brand {
+    span {
+      display: inline;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .banner {
+    img {
+      display: block;
+    }
+  }
+}
